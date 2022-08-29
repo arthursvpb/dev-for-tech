@@ -31,7 +31,7 @@ interface ReqQuery {
 }
 
 app.get<{}, {}, {}, unknown>('/convert', (req, res) => {
-  const { number = '' } = req.query as ReqQuery;
+  const { number = '' } = req.query as ReqQuery; // type assertion
 
   const convert = (number: string) => +number;
 

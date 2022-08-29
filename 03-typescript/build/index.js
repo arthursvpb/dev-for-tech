@@ -19,7 +19,7 @@ app.get('/identity', (req, res) => {
     res.send({ typedNames, typedNumbers, typedObject });
 });
 app.get('/convert', (req, res) => {
-    const { number = '' } = req.query;
+    const { number = '' } = req.query; // type assertion
     const convert = (number) => +number;
     const result = convert(number);
     res.send({ result });
