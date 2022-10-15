@@ -1,0 +1,9 @@
+{
+  "users": [
+    {
+      "email": "arthur@mock.com",
+      "password": "$2a$10$THolhkpt1oDeJX5q8E2sxOIzfhUopatYaMsNrOe1fBcx2fshrewKW",
+      "id": 1
+    }
+  ]
+}
