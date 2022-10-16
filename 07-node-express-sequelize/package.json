@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --inspect -- ./src/index.ts"
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --inspect -- ./src/index.ts",
+    "db": "docker compose up"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,9 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.25.2"
   }
 }
