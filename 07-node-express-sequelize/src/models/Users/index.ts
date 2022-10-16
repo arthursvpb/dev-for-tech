@@ -17,7 +17,7 @@ export const User = database.define(
       unique: true,
     },
     password: {
-      type: DataTypes.UUIDV4,
+      type: DataTypes.STRING,
     },
     createdAt: {
       type: DataTypes.DATE,
