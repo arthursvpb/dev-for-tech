@@ -1,10 +1,11 @@
-import { database } from '../database';
+import { database } from '../../database';
 import { DataTypes } from 'sequelize';
 
-const tableName = 'Users';
+const modelName = 'Users';
+const tableName = 'users';
 
 export const User = database.define(
-  tableName,
+  modelName,
   {
     id: {
       type: DataTypes.INTEGER,
