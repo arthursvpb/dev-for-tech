@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import express from 'express';
+import { router } from './routes';
 
 import { testConnection } from './database';
 testConnection();
@@ -7,6 +8,7 @@ testConnection();
 const app = express();
 const PORT = 8080;
 
-app.get('/', (_, res) => res.send('Hello World!'));
+app.use(express.json());
+app.use(router);
 
-app.listen(PORT, () => console.log(`Example app listening on port ${PORT}`));
+app.listen(PORT, () => console.log(`🚀 App listening on port ${PORT}`));
