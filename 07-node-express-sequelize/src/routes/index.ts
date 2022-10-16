@@ -5,7 +5,7 @@ import { userRoutes } from './user';
 
 const router = Router();
 
-const allRoutes = [userRoutes];
+const allRoutes = [userRoutes /* otherDomainRoutes */];
 
 allRoutes.forEach(routes => {
   Object.values(routes as Routes).forEach(({ method, route, controller }) => {

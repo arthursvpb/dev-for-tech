@@ -6,4 +6,9 @@ export const userRoutes = {
     route: '/users',
     controller: user.controller.addOne,
   },
+  getOne: {
+    method: 'get',
+    route: '/users/:id',
+    controller: user.controller.getOne,
+  },
 };
