@@ -2,10 +2,11 @@ import { Router } from 'express';
 import { Routes } from './types';
 
 import { userRoutes } from './user';
+import { postRoutes } from './post';
 
 const router = Router();
 
-const allRoutes = [userRoutes /* otherDomainRoutes */];
+const allRoutes = [userRoutes, postRoutes /* otherDomainRoutes */];
 
 allRoutes.forEach(routes => {
   Object.values(routes as Routes).forEach(({ method, route, controller }) => {
