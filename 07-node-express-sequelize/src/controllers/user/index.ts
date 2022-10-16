@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 
 import { hashSync } from 'bcrypt';
 
-import { User } from '../../models/Users';
+import { User } from '../../models';
 
 export const user = {
   controller: {
