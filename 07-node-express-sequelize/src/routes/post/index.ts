@@ -11,4 +11,14 @@ export const postRoutes = {
     route: '/posts',
     controller: post.controller.getAll,
   },
+  tagPost: {
+    method: 'post',
+    route: '/posts/tag',
+    controller: post.controller.tagPost,
+  },
+  getAllPostsWithTag: {
+    method: 'post',
+    route: '/posts/tag/filter',
+    controller: post.controller.getAllPostsWithTag,
+  },
 };
