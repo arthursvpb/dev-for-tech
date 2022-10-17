@@ -16,3 +16,9 @@
 - Many posts can have many tags
   - Create a new table `Posts_Tags`
     - Both with `post_id` and `tag_id`
+
+## Final ER Diagram
+
+<div align="center">
+  <img src="./.github/sequelize-er.png">
+</div>
