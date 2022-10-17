@@ -8,7 +8,7 @@ export const postRoutes = {
   },
   getOne: {
     method: 'get',
-    route: '/posts',
+    route: '/posts/all',
     controller: post.controller.getAll,
   },
   tagPost: {
