@@ -1,4 +1,5 @@
 import { Post } from './Posts';
+import { Tag } from './Tags';
 import { User } from './Users';
 
 User.hasMany(Post, {
@@ -8,4 +9,7 @@ Post.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
-export { Post, User };
+Post.belongsToMany(Tag, { foreignKey: 'post_id', through: Post });
+Tag.belongsToMany(Post, { foreignKey: 'tag_id', through: Tag });
+
+export { Post, User, Tag };
