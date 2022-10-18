@@ -7,12 +7,20 @@ import { tagRoutes } from './tag';
 
 const router = Router();
 
-const allRoutes = [userRoutes, postRoutes, tagRoutes /* otherDomainRoutes */];
-
-allRoutes.forEach(routes => {
-  Object.values(routes as Routes).forEach(({ method, route, controller }) => {
-    router[method](route, controller);
+export const importAllRoutes = (allRoutesArray: Array<Routes>) =>
+  allRoutesArray.forEach(routes => {
+    Object.values(routes as Routes).forEach(({ method, route, controller }) => {
+      router[method](route, controller);
+    });
   });
-});
+
+const allRoutes = [
+  userRoutes,
+  postRoutes,
+  tagRoutes,
+  /* otherDomainRoutes */
+] as Array<Routes>;
+
+importAllRoutes(allRoutes);
 
 export { router };
