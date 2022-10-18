@@ -1,20 +1,32 @@
 # Automated Tests
 
-## Unit tests (Mock)
+<div align="center">
+  <img src="./.github/test_types.png">
+</div>
 
-- Jest
+## Programmatic
 
-## Integration tests (Real)
+### Unit tests (Mock)
 
-- Supertest - API test client
+- Use mock data to test single units of code.
 
-## UI Tests (Mock)
-
-## E2E Tests (Real)
-
-## Jest
+#### Jest
 
 ```sh
 npm install ts-jest @types/jest
 npx ts-jest config:init
 ```
+
+### Integration tests
+
+- Use real network response to test single units of code
+
+## Interaction
+
+### UI Tests
+
+- Interprets the user journey
+
+### E2E Tests
+
+- Interprets the user journey with real network response
